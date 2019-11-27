@@ -12,4 +12,7 @@ export class BusinessCardsComponent implements OnInit {
   ngOnInit() {
   }
 
+  textDetection() {
+  //TODO
+  };
 }

@@ -26,7 +26,7 @@ export class AuthService {
     .then(res => {
       this.loginFail = false;
       console.log('Successfully signed in!');
-      this.router.navigate(['/allcards']);
+      this.router.navigate(['/businesscards']);
     })
     .catch(err => {
       this.loginFail = true;
