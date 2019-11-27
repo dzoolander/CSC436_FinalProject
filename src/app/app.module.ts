@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -22,7 +23,8 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'busines-card-app')
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'busines-card-app'),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
