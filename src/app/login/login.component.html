@@ -1,1 +1,27 @@
-<p>login works!</p>
+<div class="col-md-1 offset-md-1" style="margin-top:120px; font-size:18px;">
+    <div class="card">
+      <h1 class="card-header" style="font-size:32px;">Login</h1>
+      <div class="card-body">
+
+          <div *ngIf="authService.loginFail" class="alert alert-danger">Invalid Credentials</div>
+          <form [formGroup]="form" (ngSubmit)="signIn()">
+
+              <div class="form-group">
+                  <label for="email">Email  </label>
+                  <input type="text" formControlName="email" class="form-control" placeholder="Enter your email" style="height:35px; color:black;">
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password   </label>
+                <input type="password" formControlName="password" class="form-control" placeholder="Enter your password" style="height:35px; color:black;">
+             </div>
+
+              <button class="btn btn-primary"  style="font-size:12px;">
+                Login
+              </button>          
+
+          </form>
+
+      </div>
+    </div>
+  </div>
